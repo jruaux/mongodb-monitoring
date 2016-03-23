@@ -1,0 +1,13 @@
+<nav search_view="search" color="#322317">
+  <view name="overview" default='true' />  
+  <view name="queries" />
+  <view name="data_models" />
+  <view name="reports" />
+  <view name="alerts" />
+  <collection label="Dashboards">
+	<view name="overview" />
+	<view name="queries" />
+	<view name="server_status" />
+  </collection>
+  <view name="search" />  
+</nav>

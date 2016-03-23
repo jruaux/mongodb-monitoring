@@ -1,0 +1,6 @@
+severity,severity_description
+F,Fatal
+E,Error
+W,Warning
+I,Informational
+D,Debug
