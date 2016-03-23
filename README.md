@@ -1,8 +1,8 @@
 # Installation
 
-Install this add-on the same way you would install any Splunk app:
+Install this app the same way you would install any Splunk app:
 - automatically from [SplunkBase](https://splunkbase.splunk.com/app/2957) through *Browse more apps*
-- manually: download the *mongodb.spl* file and install it in your instance
+- manually: download the *mongodb-monitoring.spl* file and install it in your instance
 
 # Configuration
 
@@ -32,5 +32,69 @@ View and submit questions on [SplunkAnswers](http://answers.splunk.com/answers/a
 
 # Developers
 
-To build the MongoDB Monitoring app from source, clone the [git repository](https://jruaux@git.splunk.com/scm/\~jruaux/mongodb-monitoring.git) and run this command from the top-level folder:
+To build the MongoDB Monitoring app from source, clone the Github repository:
+```git clone https://github.com/jruaux/mongodb-monitoring.git```
+ and run this command from the top-level folder:
 ```python setup.py dist```
+
+# License
+
+The MongoDB Monitoring app uses the following open-source components:
+
+## BSON
+
+BSON (Binary JSON) encoding and decoding
+
+```
+# Copyright 2009-2015 MongoDB, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+```
+
+## PyMongo
+
+Python driver for MongoDB
+
+```
+# Copyright 2009-2015 MongoDB, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+```
+
+## Python library for Splunk
+
+```
+# Copyright 2011-2015 Splunk, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License"): you may
+# not use this file except in compliance with the License. You may obtain
+# a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations
+# under the License.
+```
