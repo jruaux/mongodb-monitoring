@@ -27,6 +27,11 @@ There are 3 ways to get MongoDB logs into Splunk:
 
 The MongoDB Monitoring app applies field extractions to the *mongod* sourcetype. By default the dashboards expect MongoDB logs to reside in the *mongodb* index with sourcetype *mongod*. You can change this by modifying the *mongo_index* and *mongo_sourcetype* macros under *Settings > Advanced search > Search macros*.
 
+# Alerts
+
+The MongoDB Monitoring app includes a sample alert that triggers when the number of connections to a MongoDB cluster reaches 10,000. You can modify this alert by editing the `# Connections > 10,000` stanza in [savedsearches.conf](https://raw.githubusercontent.com/jruaux/mongodb-monitoring/master/default/savedsearches.conf).
+
+
 # Questions
 View and submit questions on [SplunkAnswers](http://answers.splunk.com/answers/app/2957)
 
