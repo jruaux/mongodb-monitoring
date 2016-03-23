@@ -33,7 +33,7 @@ class DistCommand(Command):
         return python_files
 
     def run(self):
-        app = 'mongodb-monitoring'
+        app = 'mongodb'
         splunklib_arcname = "splunklib"
         modinput_dir = os.path.join(splunklib_arcname, "modularinput")
 
@@ -73,7 +73,7 @@ setup(
     cmdclass={ 'dist': DistCommand},
     description="Splunk App for MongoDB Monitoring",
     license="http://www.apache.org/licenses/LICENSE-2.0",
-    name="mongodb-monitoring",
+    name="mongodb",
     url="https://github.com/jruaux/mongodb-monitoring",
     version=1.0,
     classifiers=[
