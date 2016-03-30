@@ -42,7 +42,7 @@ To build the MongoDB Monitoring app from source, clone the Github repository:
  and run this command from the top-level folder:
 ```python setup.py dist```
 
-# License
+# Third-Party Software
 
 The MongoDB Monitoring app uses the following open-source components:
 
@@ -85,6 +85,8 @@ Python driver for MongoDB
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ```
+
+*Disclaimer*: PyMongo uses cryptographic algorithms no longer considered sufficiently secure, even for general use. The vulnerability is described [here](https://bugzilla.redhat.com/show_bug.cgi?id=1064849) 
 
 ## Python library for Splunk
 
