@@ -1,24 +1,26 @@
-# Installation
+# MongoDB Monitoring App
+
+## Installation
 
 Install this app the same way you would install any Splunk app:
 - automatically from [SplunkBase](https://splunkbase.splunk.com/app/2957) through *Browse more apps*
 - manually: download the *mongodb-monitoring.spl* file and install it in your instance
 
-# Configuration
+## Configuration
 
-## MongoDB Admin
+### MongoDB Admin
 
 To receive administrative events from MongoDB hosts, enable a *mongo_admin* data input under *Settings > Data Inputs > MongoDB Admin*
 
-## MongoDB Collection Stats
+### MongoDB Collection Stats
 
 To fetch collection statistics from MongoDB hosts, enable a *mongo_collstats* data input under *Settings > Data Inputs > MongoDB Collection Stats*
 
-## MongoDB Database Stats
+### MongoDB Database Stats
 
 To fetch database statistics from MongoDB hosts, enable a *mongo_db* data input under *Settings > Data Inputs > MongoDB Database Stats*
 
-## MongoDB Logs
+### MongoDB Logs
 
 There are 3 ways to get MongoDB logs into Splunk:
 - set up a file monitor on the Splunk Universal Forwarder to tail *mongod.log* on all MongoDB hosts
@@ -27,26 +29,34 @@ There are 3 ways to get MongoDB logs into Splunk:
 
 The MongoDB Monitoring app applies field extractions to the *mongod* sourcetype. By default the dashboards expect MongoDB logs to reside in the *mongodb* index with sourcetype *mongod*. You can change this by modifying the *mongo_index* and *mongo_sourcetype* macros under *Settings > Advanced search > Search macros*.
 
-# Alerts
+## Alerts
 
 The MongoDB Monitoring app includes a sample alert that triggers when the number of connections to a MongoDB cluster reaches 10,000. You can modify this alert by editing the `# Connections > 10,000` stanza in [savedsearches.conf](https://raw.githubusercontent.com/jruaux/mongodb-monitoring/master/default/savedsearches.conf).
 
-
-# Questions
+## Questions
 View and submit questions on [SplunkAnswers](http://answers.splunk.com/answers/app/2957)
 
-# Developers
+## Developers
 
 To build the MongoDB Monitoring app from source, clone the Github repository:
 ```git clone https://github.com/jruaux/mongodb-monitoring.git```
  and run this command from the top-level folder:
 ```python setup.py dist```
 
-# Third-Party Software
+## License
+
+The MongoDB Monitoring app is licensed under the Apache License 2.0. Details can be found in the file LICENSE.
+
+For compatibility with Python 2.6, The Splunk Software Development Kit
+for Python ships with ordereddict.py from the ordereddict package on
+[PyPI](http://pypi.python.org/pypi/ordereddict/1.1), which is licensed
+under the MIT license (see the top of splunklib/ordereddict.py).
+
+## Third-Party Software
 
 The MongoDB Monitoring app uses the following open-source components:
 
-## BSON
+### BSON
 
 BSON (Binary JSON) encoding and decoding
 
@@ -66,7 +76,7 @@ BSON (Binary JSON) encoding and decoding
 # limitations under the License.
 ```
 
-## PyMongo
+### PyMongo
 
 Python driver for MongoDB
 
@@ -88,7 +98,7 @@ Python driver for MongoDB
 
 *Disclaimer*: PyMongo uses cryptographic algorithms no longer considered sufficiently secure, even for general use. The vulnerability is described [here](https://bugzilla.redhat.com/show_bug.cgi?id=1064849) 
 
-## Python library for Splunk
+### Python library for Splunk
 
 ```
 # Copyright 2011-2015 Splunk, Inc.
