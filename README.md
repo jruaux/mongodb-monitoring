@@ -47,11 +47,6 @@ To build the MongoDB Monitoring app from source, clone the Github repository:
 
 The MongoDB Monitoring app is licensed under the Apache License 2.0. Details can be found in the file LICENSE.
 
-For compatibility with Python 2.6, The Splunk Software Development Kit
-for Python ships with ordereddict.py from the ordereddict package on
-[PyPI](http://pypi.python.org/pypi/ordereddict/1.1), which is licensed
-under the MIT license (see the top of splunklib/ordereddict.py).
-
 ## Third-Party Software
 
 The MongoDB Monitoring app uses the following open-source components:
